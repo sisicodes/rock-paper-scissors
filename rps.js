@@ -26,7 +26,9 @@ function playRound(playerChoice, computerChoice) {
     if(playerChoice == computerChoice) {
         return 'Tie! You both chose ' + playerChoice + '!';
     }
-    else if((playerChoice == 'rRock' && computerChoice == 'Scissors') || (playerChoice == 'Paper' && computerChoice == 'Rock') || (playerChoice == 'Scissors' && computerChoice== 'Paper'))  {
+    else if((playerChoice == 'rRock' && computerChoice == 'Scissors') || 
+        (playerChoice == 'Paper' && computerChoice == 'Rock') || 
+        (playerChoice == 'Scissors' && computerChoice== 'Paper'))  {
          return 'You win! ' +playerChoice+ ' beats ' + computerChoice + '!';
     }
     else {
