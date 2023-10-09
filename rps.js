@@ -34,6 +34,36 @@ function playRound(playerChoice, computerChoice) {
     }
 }
 
-let playerChoice = getPlayerSelection();
+function game() {
+    let computerWin = 0;
+    let playerWin = 0;
+    let round;
+    for (let i = 0; i<5; i++) {
+        let playerChoice = getPlayerSelection();
+        let computerChoice = getComputerChoice();
+        round = playRound(playerChoice, computerChoice);
+        console.log(round);
+        if(round.includes('win')) {
+            playerWin +=1;
+        }
+        else if (round.includes('lose')) {
+            computerWin +=1;
+        }
+    }
+    if (playerWin >computerWin) {
+        console.log('YOU WIN THE GAME!');
+    }
+    else if (computerWin > playerWin) {
+        console.log('YOU LOSE THE GAME');
+    }
+    else {
+        console.log('TIE???')
+    }
+}
+
+
+/*let playerChoice = getPlayerSelection();
 let computerChoice = getComputerChoice();
-console.log(playRound(playerChoice, computerChoice));
+console.log(playRound(playerChoice, computerChoice));*/
+
+game();
