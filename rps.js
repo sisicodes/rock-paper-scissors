@@ -74,6 +74,7 @@ function playRound(playerChoice, computerChoice) {
 function checkWin () {
     if (computerWin == 5) {
         const winScenario = document.createElement('p');
+        winScenario.classList.add("win");
         round.appendChild(winScenario);
         winScenario.textContent = 'The COMPUTER wins!!'
         rockBtn.disabled = true;
@@ -82,6 +83,7 @@ function checkWin () {
 
     } else if (playerWin == 5) {
         const winScenario = document.createElement('p');
+        winScenario.classList.add("win");
         round.appendChild(winScenario);
         winScenario.textContent = 'YOU win!!'
         rockBtn.disabled = true;
